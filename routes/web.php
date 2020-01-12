@@ -18,3 +18,15 @@ Route::get(trans('routes.roomsearch'), 'FrontendController@roomsearch')->name('r
 Route::get(trans('routes.room'), 'FrontendController@room')->name('room');
 Route::get(trans('routes.article'), 'FrontendController@article')->name('article');
 Route::get(trans('routes.person'), 'FrontendController@person')->name('person');
+
+Route::group(['prefix' => 'admin'], function() {
+
+  Route::get('/', 'BackendController@index')->name('admin');
+  Route::get(trans('routes.myobjects'), 'BackendController@myObjects')->name('myObjects');
+  Route::get(trans('routes.saveobject'), 'BackendController@saveObject')->name('saveObject');
+  Route::get(trans('routes.profile'), 'BackendController@profile')->name('profile');
+  Route::get(trans('routes.saveroom'), 'BackendController@saveRoom')->name('saveRoom');
+  Route::get('/cities', 'BackendController@cities')->name('cities.index');
+
+});
+ 
