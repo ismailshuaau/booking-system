@@ -25,7 +25,7 @@ Route::group(['prefix' => 'admin'], function() {
   Route::get(trans('routes.myobjects'), 'BackendController@myObjects')->name('myObjects');
   Route::get(trans('routes.saveobject'), 'BackendController@saveObject')->name('saveObject');
   Route::get(trans('routes.profile'), 'BackendController@profile')->name('profile');
-  Route::get(trans('routes.saveroom'), 'BackendController@saveRoom')->name('saveRoom');
+  Route::get(trans('routes.saveroom'), 'BackendController@saveRoom')->name(' ');
   Route::get('/cities', 'BackendController@cities')->name('cities.index');
 
 });

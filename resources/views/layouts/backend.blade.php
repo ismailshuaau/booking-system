@@ -87,10 +87,10 @@ THE SOFTWARE.-->
             <div class="row">
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
-                        <li class="active"><a href="admin.blade.php">Booking calendar <span class="sr-only">(current)</span></a></li>
-                        <li><a href="admin.blade.php?view=myobjects">My tourist objects</a></li>
-                        <li><a href="admin.blade.php?view=saveobject">Add a new tourist object</a></li>
-                        <li><a href="admin.blade.php?view=cities">Cities</a></li>
+                        <li class="active"><a href="{{ route('admin') }}">Booking calendar <span class="sr-only">(current)</span></a></li>
+                        <li><a href="{{ route('myObjects') }}">My tourist objects</a></li>
+                        <li><a href="{{ route('saveObject') }}">Add a new tourist object</a></li>
+                        <li><a href="{{ route('cities.index') }}">Cities</a></li>
                     </ul>
                 </div>
 
@@ -105,9 +105,8 @@ THE SOFTWARE.-->
                         </button>
 
                     </div>-->
-
-                    <?php include 'backend/' . $view . '.blade.php'; ?>
-                </div>
+                    @yield('content')
+                </div> 
             </div>
         </div> 
 
